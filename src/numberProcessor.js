@@ -61,10 +61,13 @@ function calcAvg(arr) {
 }
 
 // Func testing
-console.log('Sum:', calcSum(numbers));
-console.log('Highest #:', calcHigh(numbers));
-console.log('Lowest #:', calcLow(numbers));
-console.log('Average:', calcAvg(numbers));
+
+if (require.main === module){
+    console.log('Sum:', calcSum(numbers));
+    console.log('Highest #:', calcHigh(numbers));
+    console.log('Lowest #:', calcLow(numbers));
+    console.log('Average:', calcAvg(numbers));
+}
 
 module.exports = {
     calcSum,

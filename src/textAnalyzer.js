@@ -34,7 +34,7 @@ function longestWord(arr) {
             }
         }
     }
-    
+
     return longest;
 }
 
@@ -50,13 +50,15 @@ const filePath_2 = "./data/sample-text.txt"
 const file1_Lines = readFileLines(filePath_1)
 const file2_Lines = readFileLines(filePath_2)
 
-console.log('Quotes - Total Words:', totalWords(file1_Lines));
-console.log('Quotes - Longest Word:', longestWord(file1_Lines));
-console.log('Quotes -  Total Lines:', totalLines(file1_Lines));
+if (require.main === module){
+    console.log('Quotes - Total Words:', totalWords(file1_Lines));
+    console.log('Quotes - Longest Word:', longestWord(file1_Lines));
+    console.log('Quotes -  Total Lines:', totalLines(file1_Lines));
 
-console.log('Sample Text - Total Words:', totalWords(file2_Lines));
-console.log('Sample Text - Longest Word:', longestWord(file2_Lines));
-console.log('Sample Text - Total Lines:', totalLines(file2_Lines));
+    console.log('Sample Text - Total Words:', totalWords(file2_Lines));
+    console.log('Sample Text - Longest Word:', longestWord(file2_Lines));
+    console.log('Sample Text - Total Lines:', totalLines(file2_Lines));
+}
 
 module.exports = {
     totalWords,
